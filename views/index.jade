@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1 Welcome to #{title}!
+  section
+    div#video
+      iframe(width='560', height='315', src='http://www.youtube.com/embed/l0ibyDmTtw0', frameborder='0')
+    div#description description here
+    form(method='post', action='/')
+      p
+        label Tags
+          br
+          textarea(name='video[tags]', value='original tags')
+      p
+        label Name (optional)
+          br
+          input(name='video[tagger_name]', type='text')
+      input(type='hidden', value='videoid')
+      p
+        input(type='submit', value='Save')
+      
+  
